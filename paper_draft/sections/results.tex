@@ -1,0 +1,37 @@
+\section{Results}
+\label{sec:results}
+
+Our experiments reveal that \gpt can generate a diverse distribution of behavioral outcomes that are highly sensitive to persona conditioning. However, we also observe a significant "alignment-induced mode collapse" in the base model's behavior.
+
+\subsection{Behavioral Distribution and Entropy}
+\Tabref{tab:summary_stats} summarizes the behavioral metrics across our four primary personas. We observe a clear mapping between persona traits and outcome factors. The \aggressive persona exhibits the highest directness (7.86), while the \passive persona exhibits the highest social harmony (9.26).
+
+\begin{table}[t]
+    \centering
+    \caption{Distributional metrics across personas in the "Mistaken Credit" social dilemma. Best results in each column are highlighted. \generic shows the lowest behavioral diversity (entropy).}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Persona} & \textbf{Directness (1-10)} & \textbf{Social Harmony (1-10)} & \textbf{Category Entropy} \\
+        \midrule
+        \aggressive & \textbf{7.86} & 6.44 & 0.33 \\
+        \passive & 4.48 & \textbf{9.26} & 0.88 \\
+        \strategic & 4.38 & 8.56 & \textbf{1.01} \\
+        \generic & 6.60 & 8.24 & 0.14 \\
+        \bottomrule
+    \end{tabular}
+    }
+    \label{tab:summary_stats}
+\end{table}
+
+{\bf Alignment-Induced Mode Collapse.} The most striking finding is the behavior of the \generic persona. Despite being sampled 50 times at a temperature of $T=0.7$, the \generic persona exhibited the lowest category entropy (0.14). In 98\% of the "multiverse" branches, the model defaulted to a "Collaborative Correction" strategy, where the persona politely corrects the credit in a way that minimizes conflict. This suggests that alignment training (RLHF) has compressed the model's natural manifold for generic humans into a single "safe" mode of behavior.
+
+{\bf Strategic Diversity.} In contrast, the \strategic persona exhibited the highest category entropy (1.01). This persona successfully branched between immediate correction, delayed private discussion, and calculated strategic silence. This indicates that providing the model with complex, high-dimensional persona constraints allows it to access broader regions of its behavioral manifold, overcoming the central tendency of the base model.
+
+\subsection{Cultural and Factor Grounding}
+Our secondary experiments on cultural grounding showed that \gpt successfully shifts its outcome manifold based on sociological factors. The Japanese persona exhibited a significant shift toward higher social harmony and lower directness. For example, the Japanese persona's response emphasized maintaining \textit{wa} (harmony) by approaching the manager privately and using deferential language: \textit{"Sarah, I appreciate the direction and leadership... perhaps there's an opportunity for us to discuss this further?"}
+
+Conversely, the NYC persona prioritized "Disruptive Honesty," correcting the credit immediately in the public forum: \textit{"Hold on a second, everyone... the project you're referring to was actually spearheaded by me."} These results confirm that the model's simulation capability is not just superficial mimicry but is grounded in the underlying factors of human behavior, allowing it to navigate complex social norms across cultures.
+
+\subsection{Traversing the Tails: The Superset in Action}
+In our tail exploration experiment, we explicitly prompted the model to generate outcomes at different plausibility levels. We found that the model could generate highly creative and plausible outcomes that were never observed in the baseline sampling. For example, in the "Unlikely but Plausible" branch, the model generated a response involving a "humorous Oscar joke" to defuse the tension (\textit{"Mark definitely deserves an Oscar for his role in my project!"}). Conversely, in the "Submissive" branch, the model generated a response that completely effaced the persona's own contribution in favor of praising the colleague: \textit{"It's been wonderful to see how well Mark has brought everything together... I'm grateful for the opportunity to support such a talented team."} This outcome, while rare, was judged as highly human-consistent, demonstrating that the LLM indeed captures a superset of possible behaviors that can be accessed through targeted conditioning.

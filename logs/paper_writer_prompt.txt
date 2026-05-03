@@ -1,0 +1,460 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at .gemini/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. VERIFY COMMAND TEMPLATES: Command templates (math.tex, general.tex, macros.tex) are pre-copied to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# REPORT: A Theory of Simulation in Large Language Models
+
+## 1. Executive Summary
+This research investigates the hypothesis that Large Language Models (LLMs) function as &#34;multiverse simulators&#34; capable of generating a superset of human behavioral outcomes. By conducting series of controlled &#34;branching&#34; experiments in social conflict scenarios, we demonstrate that LLMs (specifically GPT-4o) can capture underlying psychological and cultural factors to produce a wide distribution of plausible behaviors. Our findings suggest that while LLMs are biased toward &#34;safe&#34; or &#34;collaborative&#34; outcomes due to alignment training, they retain the ability to traverse the full &#34;superset&#34; of human possibility—from extreme confrontation to submissive self-effacement—when properly conditioned.
+
+## 2. Research Question &amp; Motivation
+**Research Question**: What would a theory of simulation look like in the context of LLMs? Can LLMs simulate a superset of possible outcomes of human behavior by capturing its underlying factors?
+
+**Motivation**: As LLMs are increasingly used as &#34;agents&#34; or &#34;representatives&#34; of humans in simulations (e.g., social science, policy testing), it is critical to understand if they merely replicate the most frequent human behavior or if they can explore the &#34;tails&#34; of the distribution. A &#34;Theory of Simulation&#34; for LLMs would provide a formal framework for using these models to predict not just what *will* happen, but what *could* happen.
+
+## 3. Methodology
+We employed a **Multiverse Branching** framework across three experiments:
+1.  **Distributional Baseline**: We ran 50 parallel &#34;continuations&#34; for four distinct personas (Aggressive, Passive, Calculated, Generic Human) in a &#34;Mistaken Credit&#34; social dilemma.
+2.  **Tail Exploration**: We explicitly prompted the model to generate &#34;Likely&#34;, &#34;Unlikely but Plausible&#34;, &#34;Extreme&#34;, and &#34;Submissive&#34; outcomes to test its range.
+3.  **Factor Sensitivity**: We compared outcomes for culturally-specific personas (Japanese Salaryman vs. NYC Tech Founder) to verify grounding in underlying sociological factors.
+
+**Evaluation**: Outcomes were coded using GPT-4o-mini for features including Directness, Aggression, Social Harmony, and Strategic Delay, as well as behavioral categorization.
+
+## 4. Results
+### Behavioral Distribution (Exp 1)
+| Persona | Directness (1-10) | Social Harmony (1-10) | Category Entropy |
+| :--- | :---: | :---: | :---: |
+| Aggressive/Ambitious | 7.86 | 6.44 | 0.33 |
+| Passive/Agreeable | 4.48 | 9.26 | 0.88 |
+| Calculated/Strategic | 4.38 | 8.56 | 1.01 |
+| **Generic Human** | **6.60** | **8.24** | **0.14** |
+
+### Key Findings:
+- **Multiversal Branching**: Even with identical prompts and personas, the model generated diverse outcomes (entropy &gt; 0).
+- **Mode Collapse in Generic Persona**: The &#34;Generic Human&#34; persona exhibited the lowest entropy (0.14), with 98% of outcomes falling into &#34;Collaborative Correction.&#34;
+- **Strategic Complexity**: The &#34;Calculated/Strategic&#34; persona showed the highest entropy (1.01), successfully branching between immediate &#34;Collaborative Correction&#34; and delayed &#34;Private Talk Later.&#34;
+- **Superset Traversability**: In Exp 2, the model successfully generated highly plausible outcomes at the &#34;tails&#34; of the distribution, including a clever &#34;humorous Oscar joke&#34; as an unlikely but plausible response.
+- **Cultural Grounding**: Exp 3 showed that the model accurately shifts its behavior manifold based on cultural constraints (e.g., &#34;wa&#34; or harmony for the Japanese persona vs. &#34;disruptive honesty&#34; for the NYC persona).
+
+## 5. Analysis &amp; Discussion
+### Toward a Theory of Simulation
+Our results support a **Manifold-based Theory of Simulation**:
+1.  **The LLM as a Superset**: The pre-trained LLM represents a high-dimensional manifold of all human-documented behavior.
+2.  **Conditioning as Projection**: Personas and scenarios act as constraints that project the probability mass onto specific sub-regions of this manifold.
+3.  **The Alignment Bias**: Current SOTA models have a strong &#34;central tendency&#34; toward collaborative and safe behavior (the &#34;Helpful, Harmless, Honest&#34; mode). This manifests as &#34;mode collapse&#34; in the Generic Human persona.
+4.  **Capturing Underlying Factors**: The model does not just &#34;mimic&#34; text; it &#34;solves&#34; for behavior by integrating latent factors (ambition, culture, friendship) into its output, as evidenced by the significant shifts in factor scores across personas.
+
+## 6. Limitations
+- **Model Bias**: The results are specific to GPT-4o. Models with different alignment training might exhibit different manifolds.
+- **Sample Size**: While 50 branches per persona provide a trend, larger scales (N &gt; 1000) would be needed to map the true &#34;tails&#34; of the distribution.
+- **Scenario Specificity**: Results might vary in high-stakes versus low-stakes environments.
+
+## 7. Conclusions &amp; Next Steps
+LLMs are indeed capable of simulating a superset of human outcomes. They capture &#34;underlying factors&#34; of human behavior with enough fidelity to differentiate between complex social strategies and cultural norms. However, to use them as true &#34;multiverse generators,&#34; researchers must use techniques like high-temperature sampling or explicit &#34;tail prompting&#34; to overcome the alignment-induced mode collapse of the base model.
+
+**Next Steps**:
+- Investigate the &#34;black swan&#34; generation capability of LLMs in economic systems.
+- Develop a metric for &#34;Simulation Fidelity&#34; that compares LLM outcome manifolds to real-world behavioral datasets.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Plan: A Theory of Simulation in Large Language Models
+
+## Motivation &amp; Novelty Assessment
+
+### Why This Research Matters
+Understanding LLMs as simulators rather than just &#34;stochastic parrots&#34; or &#34;next-token predictors&#34; is crucial for their application in social sciences, policy testing, and risk assessment. If LLMs can simulate a superset of human behavioral outcomes, they can be used to explore &#34;what-if&#34; scenarios and &#34;black swan&#34; events that are difficult or impossible to observe in real-world data but are theoretically possible within the constraints of human psychology.
+
+### Gap in Existing Work
+Existing research (e.g., *Generative Agents*, *Homo Silicus*) mostly focuses on the *accuracy* or *believability* of LLM simulations—how well they match the *most likely* human behavior. There is a significant gap in exploring the **full distribution** of simulated outcomes. Specifically, can LLMs simulate the &#34;tails&#34; of human behavior? Does their training on a vast &#34;superset&#34; of human text allow them to simulate a &#34;superset&#34; of outcomes that exceeds any single individual&#39;s behavior but remains within the bounds of collective human possibility?
+
+### Our Novel Contribution
+We propose to move from &#34;point-estimate&#34; simulation (most likely outcome) to &#34;distributional&#34; simulation (multiversal outcomes). We will test the hypothesis that LLMs, by capturing the underlying factors of human behavior, can simulate a superset of outcomes. We will specifically investigate the &#34;branching&#34; behavior of LLMs in controlled social scenarios.
+
+### Experiment Justification
+- **Experiment 1: Multiverse Branching Analysis**: Why needed? To empirically demonstrate that LLMs maintain a &#34;superposition&#34; of possible futures and to characterize the diversity of these outcomes.
+- **Experiment 2: Latent Factor Perturbation**: Why needed? To verify that the simulated outcomes are indeed driven by &#34;underlying factors&#34; (e.g., personality traits, situational constraints) rather than random noise.
+- **Experiment 3: Plausibility of the &#34;Superset&#34;**: Why needed? To test if the generated outcomes, especially the &#34;tails&#34;, are perceived as human-plausible, even if they are not common in the training data.
+
+## Research Question
+What would a theory of simulation look like in the context of LLMs? Specifically, can LLMs simulate a superset of possible outcomes of human behavior by capturing its underlying factors?
+
+## Hypothesis Decomposition
+- **H1 (Multiversal Diversity)**: Given the same starting state, LLMs will generate a diverse set of plausible outcomes when sampled with non-zero temperature.
+- **H2 (Factor Grounding)**: Systematic changes to the latent factors (persona traits) will lead to predictable shifts in the distribution of outcomes.
+- **H3 (Superset Plausibility)**: Outcomes generated by LLMs include &#34;low-probability but high-plausibility&#34; events that are not frequent in typical human datasets but are consistent with human behavior.
+
+## Proposed Methodology
+
+### Approach
+We will use a &#34;Multiverse Branching&#34; framework. We will take a set of &#34;starting states&#34; (scenarios + personas) and roll out multiple parallel continuations. We will then analyze the resulting distribution of behaviors.
+
+### Experimental Steps
+1. **Scenario Selection**: Extract scenarios from `reddit_confessions` and `PersonaHub`.
+2. **Multiverse Generation**: For each scenario, generate $N$ parallel outcomes using a high-performing LLM (e.g., Claude 3.5 Sonnet or GPT-4o) with temperature &gt; 0.
+3. **Feature Extraction**: Use a secondary LLM as an evaluator/coder to extract behavioral features (e.g., &#34;aggression level&#34;, &#34;empathy&#34;, &#34;decision outcome&#34;) from the generated text.
+4. **Distributional Analysis**: Map the outcomes into a behavioral space and analyze the variance, entropy, and &#34;tail&#34; behavior.
+5. **Factor Perturbation**: Vary persona traits (e.g., change &#34;Introvert&#34; to &#34;Extrovert&#34;) and repeat steps 2-4 to see how the &#34;outcome manifold&#34; shifts.
+
+### Baselines
+- **Human Baseline**: Where available, compare against real-world outcome distributions (e.g., social science data or original Reddit threads).
+- **Random Baseline**: Compare LLM branching against &#34;random word&#34; or &#34;generic persona&#34; branching.
+
+### Evaluation Metrics
+- **Behavioral Entropy**: Diversity of outcomes.
+- **Plausibility Score**: Evaluated by a separate LLM or human-in-the-loop.
+- **Factor Sensitivity**: Correlation between perturbed factors and outcome features.
+
+### Statistical Analysis Plan
+- K-S tests to compare distributions between perturbed and control groups.
+- Clustering analysis to identify &#34;basins&#34; of outcomes.
+- Semantic similarity (BERTScore/Embeddings) to quantify outcome spread.
+
+## Expected Outcomes
+We expect to find that LLMs do indeed simulate a &#34;superset&#34; of outcomes. We predict that while most outcomes cluster around &#34;likely&#34; behavior, there will be a significant and plausible &#34;long tail&#34; of outcomes that demonstrate the model&#39;s understanding of complex behavioral factors.
+
+## Timeline and Milestones
+- **Phase 1-2 (Planning &amp; Setup)**: 1 hour (Current)
+- **Phase 3 (Implementation)**: 2 hours
+- **Phase 4 (Experiments)**: 2 hours
+- **Phase 5-6 (Analysis &amp; Documentation)**: 2 hours
+
+## Potential Challenges
+- **API Costs**: High $N$ for branching might be expensive. (Mitigation: use $N=20-50$ instead of $100+$).
+- **Evaluation Bias**: Using an LLM to evaluate an LLM might introduce bias. (Mitigation: use clear rubrics and multiple evaluation models).
+
+## Success Criteria
+- Successful generation and categorization of multiversal outcomes.
+- Statistically significant shift in outcome distribution upon factor perturbation.
+- Demonstration of &#34;low-probability, high-plausibility&#34; outcomes in the tails.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review: A Theory of Simulation in Large Language Models
+
+## Research Area Overview
+The field of &#34;simulation&#34; using Large Language Models (LLMs) has evolved from simple text generation to the conceptualization of LLMs as **multiverse generators** and **role-players**. This research area explores whether LLMs can faithfully simulate human behavior and whether they can generate a &#34;superset&#34; of possible outcomes based on underlying psychological and sociological factors.
+
+## Key Papers
+
+### 1. Multiversal views on language models (2021)
+- **Authors**: Laria Reynolds, Kyle McDonell
+- **Source**: arXiv: 2102.06391
+- **Key Contribution**: Conceptualizes LLMs as &#34;multiverse generators&#34; rather than linear text predictors.
+- **Methodology**: Introduces &#34;interpretational multiplicity&#34; (uncertainty of the present) and &#34;dynamic multiplicity&#34; (uncertainty of the future).
+- **Relevance**: Directly addresses the research hypothesis about simulating a superset of possible outcomes.
+
+### 2. Role-Play with Large Language Models (2023)
+- **Authors**: Murray Shanahan, Kyle McDonell, Laria Reynolds
+- **Source**: arXiv: 2305.16367
+- **Key Contribution**: Argues that LLMs are &#34;simulacra&#34; in a &#34;superposition&#34; of possible characters.
+- **Methodology**: Uses the metaphor of role-play to explain how LLMs exhibit complex behaviors without needing to be &#34;true&#34; agents.
+- **Relevance**: Provides the theoretical bridge between probability distributions and simulated agency.
+
+### 3. Generative Agents: Interactive Simulacra of Human Behavior (2023)
+- **Authors**: Joon Sung Park, et al.
+- **Source**: arXiv: 2304.03442
+- **Key Contribution**: Demonstrated a society of agents (&#34;Smallville&#34;) that exhibits emergent social behavior.
+- **Methodology**: Architecture involving a &#34;Memory Stream&#34;, &#34;Reflection&#34;, and &#34;Planning&#34;.
+- **Relevance**: Practical implementation of simulation theory at scale.
+
+### 4. Large Language Models as Simulated Economic Agents: Homo Silicus? (2023)
+- **Authors**: John J. Horton
+- **Source**: arXiv: 2303.07064
+- **Key Contribution**: Explores LLMs as computational models of humans for social science.
+- **Methodology**: Running classic economic experiments on LLM &#34;personas&#34;.
+- **Relevance**: Shows how LLMs capture &#34;underlying factors&#34; of human behavior (economic rationality, biases).
+
+### 5. AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents (2025)
+- **Authors**: Piao, Jinghua, et al.
+- **Source**: arXiv: 2502.08691
+- **Key Contribution**: A framework for large-scale (city-level) simulation of generative agents.
+- **Relevance**: Represents the state-of-the-art in urban and social simulation using LLMs.
+
+## Common Methodologies
+- **Role-Playing/Persona Prompting**: Assigning specific &#34;identities&#34; to LLMs to control behavior.
+- **Memory Architectures**: Using vector databases or &#34;memory streams&#34; to maintain consistency.
+- **Multiverse Branching**: Sampling multiple continuations from a single prompt to explore different outcomes.
+- **Reflection &amp; Planning**: Higher-order cognitive loops where agents &#34;think&#34; about their own past behavior.
+
+## Evaluation Metrics
+- **Believability**: Human-centered evaluation of how &#34;real&#34; the simulation feels.
+- **Consistency**: Maintaining the persona and history over time.
+- **Alignment**: How closely the simulated behavior matches real-world human data (e.g., economic experiments).
+
+## Gaps and Opportunities
+- **Superset of Outcomes**: Most current work focuses on &#34;believable&#34; (likely) outcomes. There is a gap in exploring the &#34;tails&#34; of the distribution—what are the *possible but unlikely* outcomes that an LLM can simulate?
+- **Theory of Simulation**: A formal mathematical theory of what it means for a probability distribution to be a &#34;valid&#34; simulator of a complex system (like human society).
+
+## Recommendations for Our Experiment
+- **Dataset**: Use `PersonaHub` to generate a diverse range of starting conditions.
+- **Baseline**: Use the `Homo Silicus` framework to test if LLMs capture specific behavioral factors.
+- **Experiment Design**: Implement a &#34;Multiverse&#34; branching experiment where the same initial scenario is rolled out 100+ times to observe the &#34;superset of outcomes&#34;.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. AUTHOR
+   - Use this exact author line in the \author{} block: Chenhao Tan and NeuriCo
+
+3. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+4. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+5. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+6. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+7. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+8. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+9. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+10. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   \author{Chenhao Tan and NeuriCo}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Command templates are pre-copied to paper_draft/commands/:
+   - math.tex: Math notation macros
+   - general.tex: Formatting macros
+   - macros.tex: Project-specific term definitions (customize this for your paper)
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read .gemini/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.

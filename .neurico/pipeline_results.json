@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/simulation-theory-ai-54bc-gemini/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/simulation-theory-ai-54bc-gemini/literature_review.md",
+        "resources_catalog": "/workspaces/simulation-theory-ai-54bc-gemini/resources.md",
+        "papers_dir": "/workspaces/simulation-theory-ai-54bc-gemini/papers",
+        "datasets_dir": "/workspaces/simulation-theory-ai-54bc-gemini/datasets",
+        "code_dir": "/workspaces/simulation-theory-ai-54bc-gemini/code"
+      },
+      "log_file": "/workspaces/simulation-theory-ai-54bc-gemini/logs/resource_finder_gemini.log",
+      "transcript_file": "/workspaces/simulation-theory-ai-54bc-gemini/logs/resource_finder_gemini_transcript.jsonl",
+      "elapsed_time": 807.3844928741455
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 383.58163475990295,
+      "log_file": "/workspaces/simulation-theory-ai-54bc-gemini/logs/execution_gemini.log",
+      "transcript_file": "/workspaces/simulation-theory-ai-54bc-gemini/logs/execution_gemini_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/simulation-theory-ai-54bc-gemini"
+}

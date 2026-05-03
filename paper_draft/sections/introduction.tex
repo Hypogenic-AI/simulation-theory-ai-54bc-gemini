@@ -1,0 +1,20 @@
+\section{Introduction}
+\label{sec:intro}
+
+Can a machine simulate the full spectrum of human possibility? As Large Language Models (LLMs) transition from passive text generators to active "generative agents" \cite{park2023generative}, they are being tasked with representing human behavior in increasingly complex social, economic, and policy-driven simulations \cite{horton2023homo}. In these roles, LLMs do not just predict tokens; they inhabit characters, make decisions, and interact within simulated worlds. However, despite their widespread use, we still lack a formal "Theory of Simulation" that explains how these models navigate the space of potential human actions.
+
+Understanding LLMs as simulators is crucial because it determines our ability to use them for risk assessment and "what-if" analysis. If an LLM merely replicates the most frequent or "average" human behavior, it becomes a poor tool for identifying the "black swan" events or extreme tail outcomes that often drive systemic change. A valid simulator of human behavior must be able to capture the underlying psychological and cultural factors that lead to diverse outcomes, ranging from submissive cooperation to aggressive confrontation.
+
+{\bf What is missing in existing work?} Most current research focuses on the *accuracy* or *believability* of LLM simulations---measuring how closely they match the single most likely human response in a given dataset. This "point-estimate" view ignores the fact that human behavior is inherently multiversal; the same person in the same situation might choose different paths based on subtle internal or external shifts. There is a significant gap in exploring the **full distribution** of simulated outcomes. Specifically, can LLMs simulate the "tails" of human behavior? Does their training on the vast superset of human text allow them to simulate a "superset" of outcomes that exceeds any single individual's behavior but remains within the bounds of collective human possibility?
+
+In this paper, we propose a manifold-based theory of simulation. We conceptualize the LLM as a high-dimensional manifold representing the total sum of documented human behavior. We hypothesize that personas and scenarios act as constraints that project the probability mass onto specific sub-regions of this manifold. To test this, we introduce the \method framework, where we roll out multiple parallel continuations from a single starting state to map the distribution of potential futures (see \figref{fig:method}).
+
+Our results show that \gpt generates a wide distribution of plausible outcomes, with entropy levels varying significantly based on persona conditioning. We find a striking "alignment bias" in generic personas, where 98\% of outcomes collapse into a single "safe" mode of behavior. However, by using strategic persona conditioning and explicit tail-prompting, we can recover the model's ability to traverse the full superset of human behavior, including rare but highly plausible outcomes like a "humorous Oscar joke" in a high-tension social dilemma.
+
+We summarize our primary contributions as follows:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item We propose a **Manifold-based Theory of Simulation** for LLMs, moving from point-estimate evaluations to multiversal distributional analysis.
+    \item We introduce the **\method framework** and demonstrate its utility in mapping the "outcome manifold" of social conflict across 200+ parallel simulations.
+    \item We empirically characterize **alignment-induced mode collapse** in generic personas, where behavioral entropy drops by 86\% compared to strategic personas.
+    \item We demonstrate **cultural and factor grounding**, showing that LLMs accurately shift their behavior manifolds to accommodate cultural norms such as Japanese "wa" (harmony) vs. NYC "disruptive honesty."
+\end{itemize}

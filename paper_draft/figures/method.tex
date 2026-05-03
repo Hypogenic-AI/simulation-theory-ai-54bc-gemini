@@ -1,0 +1,19 @@
+\begin{figure}[t]
+    \centering
+    \setlength{\unitlength}{1cm}
+    \begin{picture}(12,4)
+        \put(0,1.5){\framebox(2,1){Scenario $S$}}
+        \put(0,0.5){\framebox(2,1){Persona $P$}}
+        \put(2,1.5){\vector(1,0){1}}
+        \put(3,1){\framebox(3,2){\gpt}}
+        \put(6,2){\vector(2,1){2}}
+        \put(6,2){\vector(2,-1){2}}
+        \put(6,2){\vector(1,0){2}}
+        \put(8.5,3){Outcome 1}
+        \put(8.5,2){Outcome 2}
+        \put(8.5,1){Outcome $N$}
+        \put(3,0){\dashbox{0.1}(8,4){Multiverse Branching}}
+    \end{picture}
+    \caption{Overview of the \method framework. Given a scenario $S$ and a persona $P$, we roll out $N$ parallel continuations using \gpt to map the distribution of potential behavioral outcomes.}
+    \label{fig:method}
+\end{figure}

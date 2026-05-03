@@ -1,0 +1,9 @@
+PDF: papers/Multiversal_Views.pdf
+Total pages: 11
+Pages per chunk: 3
+
+Chunks:
+  Multiversal_Views_chunk_001.pdf: pages 1-3
+  Multiversal_Views_chunk_002.pdf: pages 4-6
+  Multiversal_Views_chunk_003.pdf: pages 7-9
+  Multiversal_Views_chunk_004.pdf: pages 10-11
